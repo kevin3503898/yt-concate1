@@ -15,7 +15,7 @@ class Utils:
         os.makedirs(CAPTIONS_DIR, exist_ok=True)
 
     def get_video_list_filepath(self, channel_id):
-        return os.join.path(DOWNLOADS_DIR, channel_id + '.txt')
+        return os.path.join(DOWNLOADS_DIR, channel_id + '.txt')
 
     def video_list_file_exists(self, channel_id):
         path = self.get_video_list_filepath(channel_id)
@@ -29,5 +29,5 @@ class Utils:
         return os.path.join(CAPTIONS_DIR, self.get_video_id_from_url(url) + '.txt')
 
     def caption_file_exists(self, url):
-        path = self.get_caption_path(url)
+        path = self.get_caption_filepath(url)
         return os.path.exists(path) and os.path.getsize(path) > 0
