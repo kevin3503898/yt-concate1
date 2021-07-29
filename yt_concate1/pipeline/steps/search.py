@@ -16,7 +16,7 @@ class Search(Step):
             for caption in captions:
                 if search_word in caption:
                     time = captions[caption]
-                    f = Found(yt, caption. time)
+                    f = Found(yt, caption, time)
                     found.append(f)
 
         print(len(found))
